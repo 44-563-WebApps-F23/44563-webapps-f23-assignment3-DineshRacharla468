@@ -61,6 +61,40 @@
     </tr>
 </table>
     </section>
+    <blockquote>Create a sort by function in HTML that allows you to choose Popular, A to Z, Z to A, Low Price to High or High Price to Low, mostly done</blockquote>
+    <a href="https://stackoverflow.com/questions/75785569/create-a-sort-by-function-in-html-that-allows-you-to-choose-popular-a-to-z-z-t">Link</a>
+    <pre>
+        @function quick-sort($list) {
+            $less:  ();
+            $equal: ();
+            $large: ();
+          
+            @if length($list) > 1 {
+              $seed: nth($list, ceil(length($list) / 2));
+          
+              @each $item in $list {
+                @if ($item == $seed) {
+                  $equal: append($equal, $item);
+                } @else if ($item < $seed) {
+                  $less: append($less, $item);
+                } @else if ($item > $SEED) {
+                  $large: append($large, $item);
+                }
+              }
+          
+              @return join(join(quick-sort($less, $order), $equal), quick-sort($large, $order));
+            }
+          
+            @return $list;
+          }
+          
+    </pre>
+    <section>
+        <hr>
+        <head>
+            <block
+        </head>
+    </section>
 
     </body>
 
